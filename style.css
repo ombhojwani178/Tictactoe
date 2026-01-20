@@ -1,0 +1,87 @@
+/* 1. Center everything on the page */
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f4f4f9;
+}
+
+/* 2. Style the Heading */
+h2 {
+    font-size: 3rem;
+    color: #333;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+/* 3. Status text styling */
+#status {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #555;
+    font-weight: bold;
+}
+
+/* 4. The 3x3 Grid Board */
+#board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px); /* 3 columns of 100px */
+    grid-template-rows: repeat(3, 100px);    /* 3 rows of 100px */
+    gap: 10px;                               /* Space between buttons */
+    background-color: #333;                  /* Border color showing through gaps */
+    padding: 10px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    /* Overriding the inline width from your HTML to make it fit 3 columns */
+    width: auto !important; 
+}
+
+/* 5. Styling the Buttons (Cells) */
+#board button {
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Hover effect */
+#board button:hover {
+    background-color: #e8f0fe;
+    transform: scale(1.02);
+}
+
+/* Active/Click effect */
+#board button:active {
+    transform: scale(0.95);
+}
+
+/* 6. Reset Button Styling */
+#reset {
+    margin-top: 30px;
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background-color: #ff4757;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#reset:hover {
+    background-color: #ff6b81;
+}
